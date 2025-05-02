@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+	<link rel="icon" type="image/jpg" href="../images/logoapp.jpg">
+	<title id="title">MEDICAL EASE</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="carnet de santé médicale">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@font-face {
+			font-family: 'policedeprojet';
+			src: url('projectfont.ttf') format('truetype');
+		}
+
+		body {
+			background-color: #FFF;
+			background-attachment: fixed;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-around;
+			border: solid 1px #007872;
+			height: 30px;
+			margin: 15px;
+			background-color: #007872;
+			text-align: center;
+		}
+
+		header>div {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		header>div:hover {
+			transform: scale(1.25);
+			text-decoration: underline 2px;
+		}
+
+		section {
+			padding: 15px;
+		}
+
+		h1 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		p {
+			font-size: 20px;
+			display: inline-block;
+			width: 800px;
+			height: 300px;
+			margin: 10px;
+			position: relative;
+			top: 60px;
+			float: right;
+			text-align: right;
+		}
+
+		.img {
+			margin: 10px;
+			width: 200px;
+			border-radius: 40px;
+			order: 3;
+			display: inline-block;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+			animation: floating 4s ease-in-out infinite;
+		}
+
+		@keyframes floating {
+			0% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(-10px);
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
+
+		.emoji-pulse {
+			display: inline-block;
+			animation: pulse 2s infinite;
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.2);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		audio {
+			display: none;
+		}
+
+		.playPause {
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			cursor: pointer;
+			position: relative;
+			top: 110px;
+		}
+
+		section>div {
+			display: flex;
+			align-items: center-right;
+			justify-content: space-around;
+			margin: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div><a href="page3deprojet.html">الرئيسية</a></div>
+		<div><a href="desinfos.php">المعلومات</a></div>
+		<div><a href="demanderendezvous.php">حجز موعد</a></div>
+		<div><a href="tableaudesvaccin.php"> جدول اللقاحات</a></div>
+		<div><a href="../deconnexion.php">تسجيل الخروج</a></div>
+	</header>
+
+	<section>
+		<h1><u> 🩺 النصائح الأساسية لضمان صحة ورفاهية طفلك</u></h1>
+
+		<div>
+			<img src="../images/nouriture.jpg" alt="طفل يأكل" class="img" />
+			<p>
+				<b><span class="emoji-pulse">🍽</span> نصائح لتغذية صحية للرضيع</b><br />
+				من 0 إلى 6 أشهر: الرضاعة الطبيعية هي الأفضل، وإن تعذرت فالحليب الصناعي المناسب هو البديل<br />
+				من 6 أشهر: بدء التنويع بإدخال الخضار والفواكه المهروسة، ثم البروتينات والنشويات تدريجيًا<br />
+				من 9 إلى 12 شهرًا: تقديم أطعمة متنوعة بقوام مناسب، وتحفيز الطفل على المضغ واستكشاف نكهات جديدة<br />
+				من 12 شهرًا: طعام شبيه بطعام العائلة مع التنويع والتوازن الغذائي<br />
+				تجنب: العسل قبل السنة، حليب البقر كمشروب أساسي، الأطعمة القاسية، والمأكولات المصنعة
+			</p>
+			<audio controls id="1" class="audio">
+				<source src="../audio/nmp3.wav" />
+			</audio>
+			<img id="playPauseButton1" class="playPause" src="../images/pauseaudio.jpg">
+		</div>
+
+		<div>
+			<img src="../images/sommeil.jpg" alt="طفل نائم" class="img" />
+			<p>
+				<b><span class="emoji-pulse">🛏</span> نصائح لنوم صحي للرضيع</b><br />
+				النوم ضروري لنمو الطفل. لضمان نوم جيد يجب:<br />
+				اتباع روتين ثابت مثل النوم في نفس التوقيت يوميًا مع طقوس هادئة كحمام دافئ<br />
+				تهيئة بيئة مناسبة: غرفة هادئة، مظلمة، بدرجة حرارة بين 18-20، وسرير آمن<br />
+				تنظيم التغذية عبر تقليل الرضعات الليلية بعد 6 أشهر<br />
+				تعويد الطفل على النوم بمفرده<br />
+				تجنب النوم في الأحضان أو التعرض للشاشات قبل النوم
+			</p>
+			<audio controls id="2" class="audio">
+				<source src="../audio/smp3.wav" />
+			</audio>
+			<img id="playPauseButton2" class="playPause" src="../images/pauseaudio.jpg">
+		</div>
+
+		<div>
+			<img src="../images/docteur.jpg" alt="طبيب يعالج طفل" class="img" />
+			<p>
+				<b><span class="emoji-pulse">💉</span> المتابعة الطبية والتطعيم للأطفال</b><br />
+				الزيارات المنتظمة : لمراقبة النمو والوقاية من المشكلات الصحية<br />
+				جدول التطعيمات : الالتزام بالمواعيد لحماية الطفل<br />
+				مراقبة الصحة: استشارة الطبيب عند استمرار الحمى أو فقدان الشهية<br />
+				النظافة: تعليم الطفل غسل اليدين للوقاية من العدوى
+			</p>
+			<audio controls class="audio" id="3">
+				<source src="../audio/dmp3.wav" />
+			</audio>
+			<img id="playPauseButton3" class="playPause" src="../images/pauseaudio.jpg">
+		</div>
+
+		<div>
+			<img src="../images/nettoyage.jpg" alt="طفل يستحم" class="img" />
+			<p>
+				<b><span class="emoji-pulse">🧼</span> نصائح لتنظيف الأطفال لصحة أفضل</b><br />
+				غسل اليدين: بعد الحمام وقبل الطعام<br />
+				الاستحمام اليومي بماء دافئ وصابون لطيف<br />
+				النظافة الفموية مع أول ظهور للأسنان<br />
+				الملابس النظيفة: تغيير منتظم<br />
+				تنظيف الألعاب التي تُوضع في الفم
+			</p>
+			<audio controls class="audio" id="4">
+				<source src="../audio/ntmp3.wav" />
+			</audio>
+			<img id="playPauseButton4" class="playPause" src="../images/pauseaudio.jpg">
+		</div>
+	</section>
+
+	<script>
+		const audios = document.querySelectorAll('.audio');
+		const buttons = document.querySelectorAll('.playPause');
+
+		buttons.forEach((button, index) => {
+			const audio = audios[index];
+			button.addEventListener('click', () => {
+				if (audio.paused) {
+					audio.currentTime = 0;
+					audio.play();
+					button.src = "../images/playaudio.jpg";
+				} else {
+					audio.pause();
+					button.src = "../images/pauseaudio.jpg";
+				}
+			});
+			audio.onended = function () {
+				button.src = "../images/pauseaudio.jpg";
+			};
+		});
+	</script>
+</body>
+
+</html>

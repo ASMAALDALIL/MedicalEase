@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ar">
+    <meta charset="UTF-8">
+    <meta name="description" content="carnet de santé médicale">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'policedeprojet';
+            src: url('projectfont.ttf') format('ttf');
+        }
+
+        body {
+            font-style: policedeprojet, italic;
+            background-color: #FFF;
+            background-attachment: fixed;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            border: solid 1px #007872;
+            height: 30px;
+            margin: 15px;
+            background-color: #007872;
+            text-align: center;
+        }
+
+        header>div {
+            font-size: 20px;
+            font-weight: bold;
+            display: inline-bock;
+            float: right;
+
+        }
+
+        header>div:hover {
+            transform: scale(1.25);
+            text-decoration: underline 2px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="pageresption.php">الرئيسية</a>
+        </div>
+        <div>
+            <a href="desinfos.php">المعلومات</a>
+        </div>
+        <div>
+            <a href="tableaudesrendez_vous.php">جدول المواعيد</a>
+        </div>
+        <div>
+            <a href="../deconnexion.php">تسجيل الخروج</a>
+        </div>
+    </header>
